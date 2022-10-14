@@ -1,0 +1,19 @@
+#container {
+    border: 1px solid black;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+   /* border: 1px solid red; */
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+}
+
+#score {
+    text-align: center;
+}
+
+
