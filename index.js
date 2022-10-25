@@ -11,12 +11,14 @@ function generateMole(){
 generateMole();
 
 container.addEventListener('click', (e) => {
-  console.log(e.target.src)  
-  if(e.target.src === "http://127.0.0.1:5500/images/mole.png"){
+  console.log(e.target.outerHTML)  
+   if(e.target.outerHTML === '<img src="./images/mole.png">'){
     // console.log('MOLE')
     count++;
     score.innerHTML = `Score: ${count}`;
-    e.target.src = "http://127.0.0.1:5500/images/hole.png"
+    e.target.outerHTML = '<img src="./images/hole.png">'
     generateMole();
   }
 })
+
+// let holesArr = document.querySelectorAll('.hole') --> [domElm, domElm]
